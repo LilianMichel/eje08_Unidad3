@@ -1,0 +1,133 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar color="warning">
+    <ion-title>REGISTRO</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="ion-padding" [formGroup]="myForm">
+    <ion-list>
+      <div class="content">
+        <div class="usuario1">
+          <img src="../../assets/registro/anadir.png" style="align-items: center" style="height: 100px; width: 100px">
+          
+          <ion-item class="home">
+            <ion-label position="floating">Nombre(s)</ion-label>
+            <ion-input type="text" formControlName="firstName"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="myForm.get('firstName').errors && (myForm.get('firstName').dirty || myForm.get('firstName').touched || submitted)">
+            <ion-label color="danger">Nombre invalido</ion-label>
+          </ion-item>
+
+
+          <ion-item class="home">
+            <ion-label position="floating">Apellidos</ion-label>
+            <ion-input type="text" formControlName="lastName"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="myForm.get('lastName').errors && (myForm.get('lastName').dirty || myForm.get('lastName').touched || submitted)">
+            <ion-label color="danger">Apellido erroneo</ion-label>
+          </ion-item>
+
+
+          <ion-radio-group formControlName="gender">
+            <ion-item class="home_checklb">
+              <ion-label>Genero:</ion-label>
+            </ion-item>
+            <ion-item class="home_check">
+              <ion-label>Femenino</ion-label>
+              <ion-radio value="femenino"></ion-radio>
+            </ion-item>
+            <ion-item class="home_check1">
+              <ion-label>Masculino</ion-label>
+              <ion-radio value="masculino"></ion-radio>
+            </ion-item>
+            <ion-item
+            *ngIf="myForm.get('gender').errors && (myForm.get('gender').dirty || myForm.get('gender').touched || submitted)">
+            <ion-label color="danger">Seleccina un genero</ion-label>
+          </ion-item>
+          </ion-radio-group>
+
+
+          <ion-item class="home">
+            <ion-label position="floating">RFC</ion-label>
+            <ion-input type="text" formControlName="rfc"></ion-input>
+          </ion-item>
+          <ion-item
+            *ngIf="myForm.get('rfc').errors && (myForm.get('rfc').dirty || myForm.get('rfc').touched || submitted)">
+            <ion-label color="danger">RFC incorrecto</ion-label>
+          </ion-item>
+
+
+          <ion-item class="home">
+            <ion-label>Fecha nacimiento</ion-label>
+            <ion-datetime formControlName="birthday" displayFormar="DD/MM/YYYY"></ion-datetime>
+          </ion-item>
+          <ion-item
+          *ngIf="myForm.get('birthday').errors && (myForm.get('birthday').dirty || myForm.get('birthday').touched || submitted)">
+          <ion-label color="danger">Fecha nacimiento</ion-label>
+        </ion-item>
+
+          <ion-item class="home">
+            <ion-label position="floating">Imagen</ion-label>
+            <ion-input type="text" formControlName="photo"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="myForm.get('photo').errors && (myForm.get('photo').dirty || myForm.get('photo').touched || submitted)">
+            <ion-label color="danger">URL erroneo</ion-label>
+          </ion-item>
+
+          <ion-item class="home">
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input type="text" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item
+            *ngIf="myForm.get('email').errors && (myForm.get('email').dirty || myForm.get('email').touched || submitted)">
+            <ion-label color="danger">Correo incorrecto</ion-label>
+          </ion-item>
+
+
+          <ion-item class="home">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="text" formControlName="password"></ion-input>
+          </ion-item>
+          <ion-item
+            *ngIf="myForm.get('password').errors && (myForm.get('password').dirty || myForm.get('password').touched || submitted)">
+            <ion-label color="danger">Password erroneo</ion-label>
+          </ion-item>
+
+          <ion-list class="home">
+              <ion-label>Intereses</ion-label>
+            <ion-item>
+              <ion-label>Artista</ion-label>
+              <ion-select formControlName="artista">
+                <ion-select-option value="artista1">mana</ion-select-option>
+                <ion-select-option value="artista2">reily</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item >
+              <ion-label>Album</ion-label>
+              <ion-select  formControlName="album">
+                <ion-select-option value="album1">Sueños Liquidos</ion-select-option>
+                <ion-select-option value="album2">Bien acompañado</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item >
+              <ion-label>Canciones</ion-label>
+              <ion-select  formControlName="canciones">
+                <ion-select-option value="canciones1">En el muelle de San Blas</ion-select-option>
+                <ion-select-option value="canciones2">Desde que llegaste</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+        </div>
+      </div>
+    </ion-list>
+    <ion-item class="home">
+    <ion-button class="btnGuardar" color="warning" (click)="guardar()">Guardar</ion-button>
+    <ion-button class="btnGuardar" color="warning" (click)="inicio()">Inicio</ion-button>
+  </ion-item>
+  </form>
+</ion-content>

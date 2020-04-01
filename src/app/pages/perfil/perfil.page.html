@@ -1,0 +1,50 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar color="warning">
+    <ion-title>PERFIL</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list> 
+    <div class="content">
+
+      <div padding class="usuario1">
+        <ion-item>
+          <ion-img class="photo" [src]="usuario.photo"></ion-img>
+        </ion-item>
+      </div>
+
+    <ion-item class="all">
+      <ion-label>Genero: </ion-label>
+      <ion-label>{{usuario.gender}}</ion-label>
+    </ion-item>
+
+    <ion-item class="all">
+      <ion-label>Fecha Nacimiento:</ion-label>
+      <ion-label>{{usuario.birthday}}</ion-label>
+    </ion-item>
+
+    <ion-item class="all">
+      <ion-label>RFC:</ion-label>
+      <ion-label>{{usuario.rfc}}</ion-label>
+    </ion-item>
+
+    <ion-item class="all">
+      <ion-label>Intereses:</ion-label>
+      <ion-label>{{usuario.interest.artista}}</ion-label>
+      <ion-label>{{usuario.interest.album}}</ion-label>
+      <ion-label>{{usuario.interest.canciones}}</ion-label>
+    </ion-item>
+  </div>
+  </ion-list>
+  <ion-button class="btnGaleria" color="warning" (click)="galeria()">Galeria</ion-button>
+</ion-content>
+
+
+
+
+
+

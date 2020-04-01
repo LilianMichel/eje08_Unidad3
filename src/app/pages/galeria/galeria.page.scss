@@ -1,0 +1,55 @@
+.usuario1 {
+    img {
+      height: 70vh;
+      width: auto;
+      margin: auto;
+      display: block;
+      margin-top: 10vh;
+      margin-bottom: 15px;
+    }
+  }
+  
+  .all {
+    //Igual a home
+    height: 10vh;
+    width: 100vh;
+    margin: auto;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .btnGaleria {
+    height: 5vh;
+    width: 50vh;
+    margin: auto;
+    display: block;
+    margin-top: 1px;
+    margin-bottom: 15px;
+  }
+  
+  .photo {
+    height: 25vh;
+    width: 20vh;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  ion-slide {
+    display: block;
+    height: 90vh;
+    width:  90vh;
+  }
+
+  .slide-img-padding {
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 60px;
+    
+  }
+
+ 
